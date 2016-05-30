@@ -1,0 +1,43 @@
+<div class="container" ng-controller="donorController">
+    <h1>Donors</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-6">
+                            <h3 class="panel-title">List of Donors</h3>
+                        </div>
+                        <div class="col col-xs-6 text-right">
+                            <a ng-href="#/createDonor" class="btn  btn-sm btn-primary btn-create" role="button">Create New</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-list">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Total Donation</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="donor in donors">
+
+                            <td><a ng-href="#/viewDonor/{{donor._id}}">{{donor.FirstName}} {{donor.LastName}}</a></td>
+                            <td>{{donor.Email? donor.Email+", " : ""}}{{donor.Phone}}</td>
+                            <td>{{donor.TotalDonation}}</td>
+                            <td align="center">
+                                <a class="btn btn-danger" ng-click="remove(donor._id)"><em class="fa fa-trash"></em></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

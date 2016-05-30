@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link rel="import" href="modules/events/views/ViewEvents.html">
+    <link rel="import" href="modules/donors/views/ViewDonors.html">
+    <link rel="import" href="modules/donors/views/ViewDonor.html">
+    <link rel="import" href="modules/donors/views/CreateDonor.html">
+</head>
+
+<body ng-app="dmsApp">
+<h1 class="text-center">Donor Management System</h1>
+
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="account-wall">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome</a>
+            <a href="#/createDonor" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Create
+                Donor</a>
+            <a href="#/viewDonors" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">View
+                Donors</a>
+            <a href="#/viewEvents" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">View
+                Events</a>
+        </div>
+    </div>
+</div>
+<div ng-view>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-aria.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-messages.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-touch.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+<script src="modules/events/controllers/EventPageController.js"></script>
+<script src="modules/donors/controllers/DonorPageController.js"></script>
+<script src="modules/donors/controllers/DonorController.js"></script>
+<script src="modules/core/controllers/app.js"></script>
+
+</body>
+</html>
